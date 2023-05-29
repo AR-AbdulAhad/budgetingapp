@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./Asstes/Favicon/budget-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Budgeting App</title>
+</head>
+<body>
+    <!-- Nav-Bar -->
+    <header class="menu">
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><a href="./index.html">Budgeting App</a></h1>
+            </div>
+            <div class="app-version">
+                <strong>V</strong>
+                <span>1.0.0</span>
+            </div>
+        </nav>
+    </header>
+    <!-- //Nav-Bar -->
+    <!-- Main-Section -->
+    <section class="main-section">
+        <div class="main-content wrapper">
+            <div class="budget-expenses-wrapper">
+                <!-- Budget-Section -->
+        <div id="budget-section">
+            <h2>Add Monthly Budget</h2>
+            <div class="hide error" id="budgetErrorMessage"><span>Please enter a valid monthly budget.</span></div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-money-check"></i></span>
+                <input type="number" id="budget-input" placeholder="Enter Monthly Budget">
+            </div>
+            <div class="option-container">
+                <span class="icon"><i class="fa-solid fa-coins"></i></span>
+                <label>Choose Your Currency*</label>
+                <select name="currency" id="currency">
+                    <option value="Rs">Rs</option>
+                    <option value="$">$</option>
+                    <option value="€">€</option>
+                    <option value="£">£</option>
+                </select>
+            </div>
+            <button class="btn" id="add-budget-btn">Add Budget</button>
+        </div>
+        <!-- //Budget-Section -->
+        <!-- Expenses-Section -->
+        <div id="expenses-section">
+            <h2>Add Expense</h2>
+            <div class="hide error" id="expensesErrorMessage"><span>Please enter a valid expense details.</span></div>
+            <div class="input-wrapper">
+            <div class="input-box d-wrapp m-left">
+                <span class="icon"><i class="fa-solid fa-file-pen"></i></span>
+                <input type="text" id="category-input" placeholder="Enter Category">
+            </div>
+            <div class="input-box d-wrapp">
+                <span class="icon"><i class="fa-solid fa-money-bill"></i></span>
+                <input type="number" id="amount-input" placeholder="Enter Amount">
+            </div>
+            </div>
+            <div class="calender-container">
+            <span class="icon"><i class="fa-solid fa-calendar-days"></i></span>
+            <label>Payment Date*</label>
+            <input type="date" id="date-input">
+            </div>
+            <button class="btn" id="add-expense-btn">Add Expense</button>
+        </div>
+        </div>
+        <!-- //Expenses-Section -->
+        <!-- Output-Section -->
+        <div id="output-section">
+            <div>
+                <strong>Total Budget</strong>
+                <span id="totalBudget">0</span>
+            </div>
+            <div>
+                <strong>Expenses</strong>
+                <span id="allExpenses">0</span>
+            </div>
+            <div>
+                <strong>Balance</strong>
+                <span id="totalBalance">0</span>
+            </div>
+        </div>
+        <!-- //Output-Section -->
+        <!-- Expenses-List -->
+        <div id="expenses-list">
+            <h2>Expenses List</h2>
+                <div id="expenses-list-body"></div>
+        </div>
+        </div>
+        </section>
+        <!-- //Expenses-List -->
+        <!-- Footer-Section -->
+        <footer class="footer-section">
+            <h1 class="footer-title"><a href="./index.html">Budgeting App</a></h1>
+            <p class="sub-title">Powered by Abdul Ahad</p>
+        </footer>
+        <!-- //Footer-Section -->
+        <!-- //Main-Section -->
+  <script src="./app.js"></script>
+</body>
+</html>
